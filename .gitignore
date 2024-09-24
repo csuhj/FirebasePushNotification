@@ -42,7 +42,7 @@ testem.log
 Thumbs.db
 
 #Project Specific Stuff
-/public/environment.json
+/public/config.json
 
 # Firebase
 .firebase
