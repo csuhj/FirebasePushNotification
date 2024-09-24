@@ -1,5 +1,14 @@
 <main class="main">
-  <p>Hello, World!</p>
+  <h3>Firebase Push Notification example</h3>
 </main>
+
+<p>Wait for notifications to be pushed to this token.  If the tab is focused then an alert will show, otherwise the service worker will display a notification</p>
+
+<button (click)="requestPermission()">Request Push Notification Permission</button>
+@if (deviceToken) {
+  <p>Device token = {{ deviceToken }}</p>
+} @else {
+  <p>No device token found</p>
+}
 
 <router-outlet />

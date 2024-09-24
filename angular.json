@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FirebasePushNotification": {
+    "firebase-push-notification": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FirebasePushNotification:build:production"
+              "buildTarget": "firebase-push-notification:build:production"
             },
             "development": {
-              "buildTarget": "FirebasePushNotification:build:development"
+              "buildTarget": "firebase-push-notification:build:development"
             }
           },
           "defaultConfiguration": "development"
