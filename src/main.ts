@@ -4,14 +4,14 @@ import { AppComponent } from './app/app.component';
 import { Environment } from './environment';
 
 (async () => {
-  const response = await fetch('./environment.json');
+  const response = await fetch('./config.json');
   Environment.config = await response.json();
 
   if (Environment.config?.firebaseConfig) {
-    console.log(`Loaded Firebase config from ./environment.json for projectId ${Environment.config.firebaseConfig?.projectId}`);
+    console.log(`Loaded Firebase config from ./config.json for projectId ${Environment.config.firebaseConfig?.projectId}`);
     Environment.validateConfig();
   } else {
-    console.log("Couldn't load Firebase config from ./environment.json");
+    console.log("Couldn't load Firebase config from ./config.json");
   }
 
   bootstrapApplication(AppComponent, appConfig)

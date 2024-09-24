@@ -4,18 +4,18 @@
 importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js');
 
-fetch('./environment.json').then(function(response) {
+fetch('./config.json').then(function(response) {
     if (!response.ok) {
-        console.log('Error starting Firebase ServiceWorker - failed to read environment', response.status);
+        console.log('Firebase ServiceWorker: Error starting - failed to read ./config.json', response.status);
     }
 
     return response.json();
 }).then(function(data) {
     if (!data?.firebaseConfig) {
-        console.log("Error starting Firebase ServiceWorker - environment didn't contain firebaseConfig object");
+        console.log("Firebase ServiceWorker: Error starting - ./config.json didn't contain firebaseConfig object");
     }
 
-    console.log('Initialising Firebase ServiceWorker for projectId', data?.firebaseConfig?.projectId);
+    console.log(`Firebase ServiceWorker: Loaded Firebase config from ./config.json for projectId ${data?.firebaseConfig?.projectId}`);
 
     // Initialize the Firebase app in the service worker by passing in
     // your app's Firebase config object.
