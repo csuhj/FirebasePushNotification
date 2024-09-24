@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Messaging, NotificationPayload, getToken, onMessage } from '@angular/fire/messaging';
 import { RouterOutlet } from '@angular/router';
-import { environment } from '../environments/environment';
+import { Environment } from '../environment';
 
 @Component({
   selector: 'app-root',
@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   private getDeviceToken(): void {
-    getToken(this.messaging, { vapidKey: environment.vapidKey })
+    getToken(this.messaging, { vapidKey: Environment.config.vapidKey })
       .then((token) => {
         this.deviceToken = token;
         console.log(`Got device token: ${token}`);

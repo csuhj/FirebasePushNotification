@@ -42,7 +42,6 @@ testem.log
 Thumbs.db
 
 #Project Specific Stuff
-/src/environments/environment.ts
 /public/environment.json
 
 # Firebase
