@@ -3,26 +3,29 @@ An example Push Notification project using Google Firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
+## Configuration
+
+In order for the application to run properly, you will need to copy the [./public/config-example.json](./public/config-example.json) file to `./public/config.json` (which is set to be git ignored) and populate it with the correct settings.  Then start the application.
+
+These can be found by logging in to your firebase app console (see the Firebase setup section, below).
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` or `npm start` to start the dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Finding configuration settings for an existing Firebase app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In order to populate the `config.json` config file, follow these steps:
 
-## Build
+1. Log in to https://console.firebase.google.com/
+2. Select the Project you are interested in from the list presented
+3. Go to the Project Settings page (linked to from a cog icon at the top left of the page, by the "Project Overview" link) and view the "General" tab.
+4. The details for the `firebaseConfig` section of the `config.json` file is shown under the relevant app in the "Your apps".  You can view these options as code or as "Config" - which can be pasted into the `firebaseConfig` section of the `config.json` file
+5. To find the `vapidKey`, go the "Cloud Messaging" tab of the Project Settings page.  Under the "Web configuration" section, view the Web Push Certificate and the Key pair value - this should just show the public key, which is all you need here.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Settings up a new Firebase app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+In order to set up a brand new Firebase app:
+1. Log in to https://console.firebase.google.com/.  If you don't have a Google account or login you will need to create a new one.
+2. Follow the instructions for "Creating a Firebase project" and "Register your app" here - https://firebase.google.com/docs/web/setup#add-sdk-and-initialize
