@@ -3,6 +3,13 @@ An example Push Notification project using Google Firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
+When you run the application, pushing messages to it from Firebase will either show up as an alert on the page or as a notification if the page isn't focused:
+
+![Test a Push Notification](./docs/SendPushNotification.png)
+
+
+![On Page Alert](./docs/OnPageAlert.png) ![Notification](./docs/ChromeNotification.png)
+
 ## Configuration
 
 In order for the application to run properly, you will need to copy the [./public/config-example.json](./public/config-example.json) file to `./public/config.json` (which is set to be git ignored) and populate it with the correct settings.  Then start the application.
