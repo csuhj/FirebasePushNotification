@@ -1,7 +1,7 @@
 # FirebasePushNotification
 An example Push Notification project using Google Firebase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.  Firebase support was then added by running `npx ng add @angular/fire`.
 
 When you run the application, pushing messages to it from Firebase will either show up as an alert on the page or as a notification if the page isn't focused:
 
