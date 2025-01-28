@@ -18,7 +18,9 @@ These can be found by logging in to your firebase app console (see the Firebase 
 
 ## Development server
 
-Run `ng serve` or `npm start` to start the dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to pull down the required npm dependencies that the application will need to build.
+
+Run `ng serve` or `npm start` to build and start the dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Finding configuration settings for an existing Firebase app
 
